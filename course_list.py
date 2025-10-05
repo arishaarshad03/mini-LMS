@@ -1,7 +1,7 @@
 from course import Course
 from range import Range
 class CourseList:   
-    def __init__(self, size):
+    def __init__(self, size = 6):
         self._courses = [None]*size         #static array
         self._count = 0
         self._size = size
@@ -62,9 +62,7 @@ class CourseList:
         if self._count == 0:
             print("No courses in the list yet.")
             return
-
-        print("\n===== ALL COURSES =====")
         for i in Range(self._count):
             print(f"{i + 1}. {self._courses[i]}")       #calls str of course class
-        print("========================")
+    
 
